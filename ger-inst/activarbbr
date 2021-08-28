@@ -1,0 +1,7 @@
+#! /bin/bash
+sleep 1 ; uname -r
+sleep 2 ; sysctl net.ipv4.tcp_available_congestion_control
+sleep 2 ; sysctl net.ipv4.tcp_congestion_control
+sleep 2 ; sysctl net.core.default_qdisc
+sleep 2 ; lsmod | grep bbr
+sleep 2 ; echo "BBR ACTIVADO CON EXITO"
