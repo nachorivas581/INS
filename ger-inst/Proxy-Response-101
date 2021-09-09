@@ -1,7 +1,4 @@
 #!/bin/bash
-Block="/etc/bin" && [[ ! -d ${Block} ]] && exit
-Block > /dev/null 2>&1
-clear
 cowsay -f eyes "esta herramienta le cambia y da color al status de conexion.... Para que funcione dicho Script Debes tener el Dropbear activado en el puerto 444" | lolcat 
 figlet ..Nexuser.. | lolcat
 BARRA="\e[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\e[0m"
