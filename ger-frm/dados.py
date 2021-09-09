@@ -1,7 +1,4 @@
 #!/bin/bash
-Block="/etc/bin" && [[ ! -d ${Block} ]] && exit
-Block > /dev/null 2>&1
-clear
 cowsay -f eyes "esta herramienta ayuda aproteger tu vps de un ataque DDOS" | lolcat 
 figlet ..dankelthaher.. | lolcat
 BARRA1="\e[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\e[0m"
