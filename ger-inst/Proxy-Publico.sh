@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 cowsay -f eyes "esta herramienta le cambia y da color al status de conexion...." | lolcat 
 figlet ..Nexuser.. | lolcat
 BARRA="\e[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\e[0m"
