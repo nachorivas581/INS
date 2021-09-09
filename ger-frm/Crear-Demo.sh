@@ -1,7 +1,5 @@
 #!/bin/bash
 #!/bin/bash
-Block="/etc/bin" && [[ ! -d ${Block} ]] && exit
-Block > /dev/null 2>&1
 rm -rf /etc/adm
 mkdir /etc/adm
 mkdir /etc/adm/usuarios
