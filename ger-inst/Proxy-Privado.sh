@@ -1,6 +1,4 @@
 #!/bin/bash
-Block="/etc/bin" && [[ ! -d ${Block} ]] && exit
-Block > /dev/null 2>&1
 fun_bar () {
 comando="$1"
  _=$(
