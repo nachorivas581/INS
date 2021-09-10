@@ -1,7 +1,4 @@
 #!/bin/bash
-Block="/etc/bin" && [[ ! -d ${Block} ]] && exit
-Block > /dev/null 2>&1
-
 SCPdir="/etc/newadm"
 SCPusr="${SCPdir}/ger-user"
 SCPfrm="/etc/ger-frm"
