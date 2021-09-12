@@ -12,7 +12,7 @@ if [ -e /etc/adm/bnr ]; then
 /etc/adm/bnr
 fi
 cowsay -f eyes "esta herramienta crea un panel de tu O.S para usarlo como ordenador...." | lolcat 
-figlet ..dankelthaher.. | lolcat
+figlet ..Nexuser.. | lolcat
 echo -e "\033[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\033[0m"
 echo -e "\033[1;34mLA INSTALACION PUEDE DEMORAR ALGUNOS MINUTOS\033[0m"
 echo -e "\033[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\033[0m"
