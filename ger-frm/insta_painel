@@ -12,7 +12,7 @@ Block > /dev/null 2>&1
 BARRA="\e[0;31m➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\e[0m"
 clear
 cowsay -f eyes "esta herramienta crea un panel en el cual deves de subir servers para que los demas usuarios descarguen.." | lolcat 
-figlet ..dankelthaher.. | lolcat
+figlet ..Nexuser.. | lolcat
 sleep 2
 echo -e "$BARRA"
 echo -e "${ver}            +++++ ATENCION +++++${am} "
