@@ -1,8 +1,8 @@
 #!/bin/bash
 cowsay -f eyes " VPSMOD Nexuser" | lolcat
 figlet ..Nexuser.. | lolcat ;
-apt install git ;
-apt install npm ;
+apt install git  -y;
+apt install npm  -y ;
 sudo apt install -y make python build-essential;
 git clone https://github.com/botgram/shell-bot.git;
 cd shell-bot;
