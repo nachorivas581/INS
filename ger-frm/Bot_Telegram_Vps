@@ -1,0 +1,6 @@
+!# /bin/bash
+sudo apt install -y make python build-essential;
+git clone https://github.com/botgram/shell-bot.git;
+cd shell-bot;
+npm install;
+
