@@ -4,6 +4,7 @@ figlet ..Nexuser.. | lolcat ;
 apt install git  -y;
 apt install npm  -y ;
 sudo apt install -y make python build-essential;
+cd /root/ ;
 git clone https://github.com/botgram/shell-bot.git;
 cd shell-bot;
 npm install;
