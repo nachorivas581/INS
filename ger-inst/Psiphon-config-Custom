@@ -1,5 +1,6 @@
 cat /root/psi/server-entry.dat
 cp /root/psi/server-entry.dat /var/www/html
+chmod +x /var/www/html/server-entry.dat
 
 ip="$(curl ifconfig.me)"
 clear;
