@@ -1,0 +1,24 @@
+cat /root/psi/server-entry.dat
+cp /root/psi/server-entry.dat /var/www/html
+
+ip="$(curl ifconfig.me)"
+clear;
+sleep 3;
+
+echo "..."
+sleep 2;
+echo "..."
+sleep 2 ;
+echo "..."
+echo "..."
+sleep 2;
+echo "..."
+sleep 2 ;
+echo "..."
+sleep 2;
+echo "..."
+sleep 2 ;
+echo "..."
+
+echo "http://$ip:81/server-entry.dat"
+
