@@ -6,13 +6,15 @@ chmod +x /var/www/html/server-entry.dat
 ip="$(curl ifconfig.me)"
 clear;
 sleep 3;
-
+clear 
 echo -ne 'Subiendo Archivo al servidor                    (VPS-MOD)\r'
-sleep 1
+sleep 3
 echo -ne 'Configuracion guardada             \r'
 sleep 1
-echo -ne 'Listo!\r'
-echo -ne '\n'
-
-echo "http://$ip:81/server-entry.dat"
+echo -ne 'Listo!                             \r'
+sleep 2
+echo -ne 'INGRESA AL  LINK Y COPIA LA CONFIGURACION! \r'
+sleep 3
+clear
+tput setaf 7 ; tput setab 2  ; tput bold ; printf '%0s%s%-0s\n' "http://$ip:81/server-entry.dat" ; tput sgr0
 
