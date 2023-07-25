@@ -1,0 +1,7 @@
+systemctl start udp-custom &>/dev/null
+sleep 1 ;
+echo "Encendiendo Servicio"
+sleep 1;
+systemctl enable udp-custom &>/dev/null
+sleep 1 ;
+echo "Servicio Activado"
