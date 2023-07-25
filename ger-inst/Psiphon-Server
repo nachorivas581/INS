@@ -1,0 +1,26 @@
+#!/bin/bash
+FECHA=$(date +"%Y-%m-%d")
+  echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Psiphon  [VPS-MOD]" ; tput sgr0
+echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+figlet  psiphon
+
+echo "1) Configuracion del Server"
+
+echo "2) Desinstalar Servidor Psiphon"
+
+echo "3) Encender Servidor Psiphon"
+
+echo "4) Instalador Servidor Psiphon"
+
+#leemos del teclado
+read n
+
+case $n in
+        1) cd /etc/adm-lite & bash config;;
+        2) cd /etc/adm-lite & bash uninstall;;
+        3) cd /etc/adm-lite & bash on;;
+        4) cd /etc/adm-lite & bash install;;
+        *) echo "Opción incorrecta";;
+
+esac
