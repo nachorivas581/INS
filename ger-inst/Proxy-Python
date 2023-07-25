@@ -1,0 +1,32 @@
+#!/bin/bash
+FECHA=$(date +"%Y-%m-%d")
+
+
+cowsay -f eyes " [VPSMOD]-[Proxy-Python]" | lolcat
+
+
+
+
+
+
+
+echo "----------------------------------------------"|lolcat
+echo  "1) Python Directo"
+echo  "2) Python Response 101"
+echo  "3) PAY+SSL"
+echo  "4) Volver Al Menu"
+echo "----------------------------------------------"|lolcat
+#leemos del teclado
+
+echo "Selecciona una opcion:"
+
+read n
+
+case $n in
+        1) bash /etc/adm-lite/python-direct;;
+        2) bash /etc/adm-lite/python-101;;
+        3) bash /etc/adm-lite/pay-ssl;;
+        4) bash /etc/newadm/menu;;
+        *)echo "Opcion incorrecta ";;
+
+esac
