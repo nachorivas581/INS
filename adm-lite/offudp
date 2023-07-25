@@ -1,0 +1,7 @@
+systemctl stop udp-custom &>/dev/null
+sleep 1 ;
+echo "Deteniendo Servicio"
+sleep 1;
+systemctl disable udp-custom &>/dev/null
+sleep 1 ;
+echo "Servicio Detenido"
