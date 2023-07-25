@@ -768,6 +768,16 @@ msg -bar
 mine_port
 echo ""
 echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"
+a="$(systemctl is-active udp-custom)"
+
+case $a  in
+
+active) echo  "UDP-CUSTOM:[ON]"
+;;
+inactive)echo "UDP-CUSTOM: [OFF]"
+;;
+esac
+
 msg -bar
 msg -ne "$(fun_trans "SISTEMA OPERATIVO"): " && msg -bra "$(os_system)  "
 msg -ne "$(fun_trans "DIRECCION DE LA MAQUINA"): " && msg -bra "$(wget -qO- ifconfig.me)"
