@@ -1,5 +1,4 @@
-
-  GNU nano 4.8                                               b                                                          #!/bin/bash
+#!/bin/bash
 FECHA=$(date +"%Y-%m-%d")
   echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Psiphon  [VPS-MOD]" ; tput sgr0
