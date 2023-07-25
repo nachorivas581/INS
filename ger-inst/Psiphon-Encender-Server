@@ -1,4 +1,0 @@
-cd /root/psi;
-sleep 3;
-echo "Encendiendo Servidor Psiphon"
-nohup ./psiphond run & exit
