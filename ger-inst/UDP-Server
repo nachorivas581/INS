@@ -1,0 +1,53 @@
+
+  GNU nano 4.8                                               b                                                          #!/bin/bash
+FECHA=$(date +"%Y-%m-%d")
+  echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Psiphon  [VPS-MOD]" ; tput sgr0
+echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+figlet  psiphon
+
+echo "1) Instalar Server UDP"
+
+echo "2) Encender Servicio UDP"
+
+echo "3) Detener Servicio UDP"
+
+echo "4) Crear Cuenta UDP"
+
+#leemos del teclado
+read n
+
+case $n in
+        1) cd /etc/adm-lite & bash instudp;;
+        2) cd /etc/adm-lite & bash upudp;;
+        3) cd /etc/adm-lite & bash offudp;;
+        4) cd /etc/ger-frm  & ssh ;;
+        *) echo "Opción incorrecta";;
+
+esac
+
+  GNU nano 4.8                                               b                                                          #!/bin/bash
+FECHA=$(date +"%Y-%m-%d")
+  echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Psiphon  [VPS-MOD]" ; tput sgr0                       echo -e "\033[1;31m-------------------------------------------------------------------\033[0m"
+figlet  psiphon
+
+echo "1) Instalar Server UDP"
+
+echo "2) Encender Servicio UDP"
+
+echo "3) Detener Servicio UDP"
+
+echo "4) Crear Cuenta UDP"
+
+#leemos del teclado
+read n
+
+case $n in
+        1) cd /etc/adm-lite & bash instudp;;
+        2) cd /etc/adm-lite & bash upudp;;
+        3) cd /etc/adm-lite & bash offudp;;
+        4) cd /etc/ger-frm  & ssh ;;
+        *) echo "Opción incorrecta";;
+
+esac
