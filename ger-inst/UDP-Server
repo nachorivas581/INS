@@ -2,7 +2,7 @@
 FECHA=$(date +"%Y-%m-%d")
 
 
-cowsay -f eyes " [VPSMOD]-[PSIPHON]" | lolcat
+cowsay -f eyes " [VPSMOD]-[UDP-Server]" | lolcat
 
 
 
