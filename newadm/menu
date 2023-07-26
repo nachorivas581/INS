@@ -769,14 +769,14 @@ memorias
 msg -bar
 mine_port
 echo ""
-echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"
+echo -e "\e[1;31mBADVPN:\e[0m" "$badvpn"|lolcat
 a="$(systemctl is-active udp-custom)"
 
 case $a  in
 
-active) echo  "UDP-CUSTOM:[ON]"
+active) echo  "UDP-CUSTOM:[ON]"|lolcat
 ;;
-inactive)echo "UDP-CUSTOM: [OFF]"
+inactive)echo "UDP-CUSTOM: [OFF]"|lolcat
 ;;
 esac
 
@@ -786,7 +786,7 @@ msg -ne "$(fun_trans "DIRECCION DE LA MAQUINA"): " && msg -bra "$(wget -qO- ifco
 [[ -e ${SCPdir}/USRonlines ]] && msg -ne "$(fun_trans "USUARIOS EN LINEA"): " && msg -bra "$(cat ${SCPdir}/USRonlines) $(fun_trans "Usuarios")"
 [[ -e ${SCPdir}/USRexpired ]] && msg -ne "$(fun_trans "USUARIOS EXPIRADOS"): " && msg -bra "$(cat ${SCPdir}/USRexpired) $(fun_trans "Usuarios")"
 [[ -e ${SCPdir}/message.txt ]] && msg -bar && msg -bra "MENSAJE: $(cat ${SCPdir}/message.txt)"
-[[ -e ${SCPdir}/key.txt ]] && msg -bar && msg -bra "USER-KEY: $(cat ${SCPdir}/key.txt)"
+[[ -e ${SCPdir}/key.txt ]] && msg -bar && msg -bra "KEY: $(cat ${SCPdir}/key.txt)"|lolcat
 # NOVO SISTEMA DE MENUS
 msg -bar
 msg -ama "$(fun_trans "MANAGER") \033[1;31m[\033[1;32m VPSMOD \033[1;31m] \033[1;33m[\033[1;34m By Nexuser \033[1;33m] \033[1;31m[\033[1;37mFINAL\033[1;31m] "
