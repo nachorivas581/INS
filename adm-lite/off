@@ -1,0 +1,6 @@
+cd /root/psi;
+sleep 3;
+echo "Apagando Servidor Psiphon"
+pkill psiphond
+sleep 2;
+echo "Servidor Apagado"
