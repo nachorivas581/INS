@@ -1,7 +1,7 @@
-cat /root/psi/server-entry.dat
 cp /root/psi/server-entry.dat /var/www/html
 chmod +x /var/www/html/server-entry.dat
 chmod -R  755 /var/www
+
 
 ip="$(curl ifconfig.me)"
 clear;
@@ -12,8 +12,8 @@ sleep 3
 echo -ne 'Configuracion guardada             \r'
 sleep 1
 echo -ne 'Listo!                             \r'
-sleep 2
-echo -ne 'INGRESA AL  LINK Y COPIA LA CONFIGURACION! \r'
-sleep 3
+sleep 2;
+sleep 3;
 clear
-tput setaf 7 ; tput setab 2  ; tput bold ; printf '%0s%s%-0s\n' "http://$ip:81/server-entry.dat" ; tput sgr0
+cat /root/psi/server-entry.dat|lolcat
+tput setaf 7 ; tput setab 2  ; tput bold ; printf '%0s%s%-0s\n' " INGRESA AL  LINK Y COPIA LA CONFIGURACION!:'http://$ip:81/server-entry.dat'" ; tput sgr0
