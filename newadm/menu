@@ -760,10 +760,9 @@ export -f meu_ip
 export -f fun_ip
 clear
 echo ""
-echo -e "\033[1;31m[\033[1;33m \033[1;32m-------[VPS-MOD]\033[1;33m [By Nexuser]-------\033[1;31m ]\033[0m"
 echo ""
 msg -bar
-msg -ama "$(fun_trans "Puertos Activos y Detalles de la VPS!!")"
+msg -ama 🚀🚀🚀[ -------[VPS-MOD]---[By Nexuser]------- ]🚀🚀🚀
 msg -bar
 memorias
 msg -bar
