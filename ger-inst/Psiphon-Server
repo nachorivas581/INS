@@ -14,8 +14,9 @@ echo "----------------------------------------------"|lolcat
 echo  "1) Instalar Server Psiphon"
 echo  "2) Desinstalar Servicio Psiphon"
 echo  "3) Encender Servicio Psiphon"
-echo  "4) Configuracion Servicio Psiphon"
-echo  "5) Volver al Menu" 
+echo  "4) Apagar Servicio Psiphon"
+echo  "5) Configuracion Servicio Psiphon"
+echo  "6) Volver al Menu" 
 echo "----------------------------------------------"|lolcat
 #leemos del teclado
 
@@ -27,8 +28,9 @@ case $n in
         1) bash /etc/adm-lite/install;;
         2) bash /etc/adm-lite/uninstall;;
         3) bash /etc/adm-lite/on;;
-        4) bash /etc/adm-lite/config;;
-        5) bash /etc/newadm/menu;;
+        4) bash /etc/adm-lite/off;;
+        5) bash /etc/adm-lite/config;;
+        6) bash /etc/newadm/menu;;
         *)echo "Opcion incorrecta ";;
 
 esac
