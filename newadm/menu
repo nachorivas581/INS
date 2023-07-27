@@ -762,7 +762,7 @@ clear
 echo ""
 echo ""
 msg -bar
-msg -ama 🚀🚀🚀[ -------[VPS-MOD]---[By Nexuser]------- ]🚀🚀🚀
+msg -ama "🚀🚀🚀[ -------[VPS-MOD]---[By Nexuser]------- ]🚀🚀🚀"|lolcat
 msg -bar
 memorias
 msg -bar
