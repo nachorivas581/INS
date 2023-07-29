@@ -2,5 +2,5 @@ cd /root/psi;
 sleep 3;
 echo "Encendiendo Servidor Psiphon"
 sleep 1;
-"echo Psiphon Activado con Exito!"
+echo "Psiphon Activado con Exito!"
 nohup ./psiphond run & exit
