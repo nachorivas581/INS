@@ -1,0 +1,30 @@
+#!/bin/bash
+FECHA=$(date +"%Y-%m-%d")
+
+
+cowsay -f eyes " [VPSMOD]-[Wireguard]" | lolcat
+
+
+
+
+
+
+
+echo "----------------------------------------------"|lolcat
+echo  "1) Instalacion de Servidor Wireguard"
+echo  "2) Menu Wireguard"
+echo  "3) Volver Al Menu"
+echo "----------------------------------------------"|lolcat
+#leemos del teclado
+
+echo "Selecciona una opcion:"
+
+read n
+
+case $n in
+        1) bash /etc/adm-lite/wireguard;;
+        2) bash /etc/adm-lite/wireguard-install.sh;;
+        3) bash /etc/newadm/menu;;
+        *)echo "Opcion incorrecta ";;
+
+esac
