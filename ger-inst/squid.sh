@@ -31,7 +31,7 @@ fun_squid  () {
   }
 }
 install_squid () {
-msg -ama  " $(fun_trans "INSTALADOR SQUID ADM-ULTIMATE")"
+msg -ama  " $(fun_trans "INSTALADOR SQUID [VPS-MOD]")"
 msg -bar
 fun_ip
 msg -ne " $(fun_trans "Confirme su IP")"; read -p ": " -e -i $IP ip
@@ -380,7 +380,7 @@ elif cat /etc/os-release | grep PRETTY_NAME | grep "stretch"; then
     systemctl enable squid
     systemctl restart squid
 else
-    echo "SISTEMA OPERATIVO NO SOPORTADO POR FAVOR PONGASE EN CONTACTO CON @dankelthaher1"
+    echo "SISTEMA OPERATIVO NO SOPORTADO POR FAVOR PONGASE EN CONTACTO CON @Nexuser"
     exit 1;
 fi
 #/usr/bin/htpasswd -b -c /etc/squid/passwd USERNAME_HERE PASSWORD_HERE
