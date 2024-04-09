@@ -1,2 +1,2 @@
 #! /bin/bash
-bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh) | tee v2ray_ins.log
+bash source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
