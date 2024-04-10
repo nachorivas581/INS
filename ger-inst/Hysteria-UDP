@@ -1,0 +1,24 @@
+cowsay -f Cheese " [VPSMOD]-[Hysteria-Server]" | lolcat
+sleep 2
+echo "Si tienes problemas comunicate con el administrador!"
+
+echo "----------------------------------------------"|lolcat
+echo  "1) Instalar Server  Hysteria"
+echo  "2) Encender Servicio Hysteria"
+echo  "3) Detener Servicio   Hysteria"
+echo  "4) Volver al Menu"
+echo "----------------------------------------------"|lolcat
+#leemos del teclado
+
+echo "Selecciona una opcion:"
+
+read n
+
+case $n in
+        1) bash /etc/adm-lite/insthys;;
+        2) bash /etc/adm-lite/uphys;;
+        3) bash /etc/adm-lite/offudp;;
+        4) bash /etc/newadm/menu;;
+        *)echo "Opcion incorrecta ";;
+
+esac
