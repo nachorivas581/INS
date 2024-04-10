@@ -779,6 +779,18 @@ inactive)echo "UDP-CUSTOM: [OFF]"|lolcat
 ;;
 esac
 
+a="$(systemctl is-active hysteria-server )"
+
+case $a  in
+
+active) echo  "Hysteria:[ON]"|lolcat
+;;
+inactive)echo "Hysteria: [OFF]"|lolcat
+;;
+esac
+
+
+
 msg -bar
 msg -ne "$(fun_trans "SISTEMA OPERATIVO"): " && msg -bra "$(os_system)  "
 msg -ne "$(fun_trans "DIRECCION DE LA MAQUINA"): " && msg -bra "$(wget -qO- ifconfig.me)"
