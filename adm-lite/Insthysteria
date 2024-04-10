@@ -1,0 +1,7 @@
+cd /etc/adm-lite
+chmod 777 hys
+bash hys
+clear
+chmod 777 insthys
+bash insthys
+clear
