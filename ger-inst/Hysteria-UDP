@@ -15,7 +15,7 @@ echo "Selecciona una opcion:"
 read n
 
 case $n in
-        1) bash /etc/adm-lite/insthys;;
+        1) bash /etc/adm-lite/Insthysteria;;
         2) bash /etc/adm-lite/uphys;;
         3) bash /etc/adm-lite/offudp;;
         4) bash /etc/newadm/menu;;
