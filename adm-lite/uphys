@@ -1,1 +1,2 @@
 systemctl enable hysteria-server.service
+systemctl start hysteria-server.service
