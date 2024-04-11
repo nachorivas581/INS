@@ -23,7 +23,7 @@ PROTOCOL="udp"
 UDP_PORT=":36712"
 
 # OBFS
-OBFS="$usario"
+OBFS="$usuario"
 
 # PASSWORDS
 PASSWORD="$password"
