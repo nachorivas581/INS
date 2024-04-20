@@ -13,7 +13,6 @@ ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
  #####-----CUENTA HWID
     cuenta_hwid() {
     
-      figlet HWID-USER Nexuser|lolcat
       
       while true; do
         echo -ne "\e[1;93mDigite HWID: \e[1;32m" && read nomeuser
@@ -89,7 +88,9 @@ ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
       read -t 60 -n 1 -rsp $'\033[1;39m       << Presiona enter para Continuar >>\n'
     }
 
-
+cowsay -f Cheese HWID-USER|lolcat
+sleep 2
+echo "Presiona ENTER para Continuar"
 #VISTA#
 read op
 case $op in
