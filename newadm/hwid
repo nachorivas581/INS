@@ -1,0 +1,100 @@
+#CARPETAS NUEVAS (REEMPLAZAR)#
+ mkdir -p /etc/SCRIPT-LATAM >/dev/null 2>&1
+  mkdir -p /etc/SCRIPT-LATAM/temp >/dev/null 2>&1
+  mkdir -p /etc/SCRIPT-LATAM/filespy >/dev/null 2>&1
+  mkdir -p /etc/SCRIPT-LATAM/botmanager >/dev/null 2>&1
+  mkdir -p /etc/SCRIPT-LATAM/PortM >/dev/null 2>&1
+  mkdir -p /etc/SCRIPT-LATAM/v2ray >/dev/null 2>&1
+  mkdir -p /root/.ssh >/dev/null 2>&1
+
+
+#IP#
+ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+ #####-----CUENTA HWID
+    cuenta_hwid() {
+    
+      figlet HWID-USER Nexuser|lolcat
+      
+      while true; do
+        echo -ne "\e[1;93mDigite HWID: \e[1;32m" && read nomeuser
+        nomeuser="$(echo $nomeuser | sed -e 's/[^a-z0-9 -]//ig')"
+        if [[ -z $nomeuser ]]; then
+          err_fun 15 && controlador_ssh
+        elif [[ "${#nomeuser}" -lt "5" ]]; then
+          err_fun 15 && continue
+        elif [[ "${#nomeuser}" -gt "32" ]]; then
+          err_fun 15 && continue
+        elif [[ "$(echo ${usuarios_ativos2[@]} | grep -w "$nomeuser")" ]]; then
+          err_fun 16 && continue
+        fi
+        break
+      done
+
+      while true; do
+        echo -ne "\e[1;93mDigite Nombre: \e[1;32m" && read nickhwid
+        nickhwid="$(echo $nickhwid | sed -e 's/[^a-z0-9 -]//ig')"
+        if [[ -z $nickhwid ]]; then
+          err_fun 15 && continue
+        elif [[ "${#nickhwid}" -lt "5" ]]; then
+          err_fun 15 && continue
+        elif [[ "${#nickhwid}" -gt "15" ]]; then
+          err_fun 15 && continue
+        elif [[ "$(echo ${usuarios_ativos2[@]} | grep -w "$nickhwid")" ]]; then
+          err_fun 16 && continue
+        fi
+        break
+      done
+      while true; do
+        echo -ne "\e[1;93mDigite Tiempo de Validez: \e[1;32m" && read diasuser
+        if [[ -z "$diasuser" ]]; then
+          err_fun 7 && continue
+        elif [[ "$diasuser" != +([0-9]) ]]; then
+          err_fun 8 && continue
+        elif [[ "$diasuser" -gt "360" ]]; then
+          err_fun 9 && continue
+        fi
+        break
+      done
+      tput cuu1 && tput dl1
+      tput cuu1 && tput dl1
+      echo -ne "\e[38;5;202mIP del Servidor \e[1;97m" && echo -e "$ip"
+      echo -ne "\e[38;5;202mHWID: \e[1;97m" && echo -e "$nomeuser"
+      echo -ne "\e[38;5;202mUsuario: \e[1;97m" && echo -e "$nickhwid"
+      echo -ne "\e[38;5;202mDias de Duracion: \e[1;97m" && echo -e "$diasuser"
+      echo -ne "\e[38;5;202mFecha de Expiracion: \e[1;97m" && echo -e "$(date "+%F" -d " + $diasuser days")"
+      
+      [[ $(cat /etc/passwd | grep $nomeuser: | grep -vi [a-z]$nomeuser | grep -v [0-9]$nomeuser >/dev/null) ]] && {
+         "         Error, Usuario no creado"
+        return 0
+      }
+      valid=$(date '+%C%y-%m-%d' -d " +$diasuser days") && datexp=$(date "+%F" -d " + $diasuser days")
+      userdel $nomeuser >/dev/null 2>&1
+      useradd -m -s /bin/false $nomeuser -e ${valid} >/dev/null 2>&1 || {
+         "         Error, Usuario no creado"
+        return 0
+      }
+      (
+        echo $nomeuser
+        echo $nomeuser
+      ) | passwd $nomeuser 2>/dev/null || {
+        userdel --force $nomeuser
+
+        return 1
+      }
+
+      echo "$nomeuser||${datexp}||${nickhwid}" >>/etc/SCRIPT-LATAM/cuentahwid
+      echo "$nomeuser||${datexp}||${nickhwid}" >>/etc/SCRIPT-LATAM/regtotal
+      
+      rebootnb "backbaseu" 2>/dev/null
+      read -t 60 -n 1 -rsp $'\033[1;39m       << Presiona enter para Continuar >>\n'
+    }
+
+
+#VISTA#
+read op
+case $op in
+*) cuenta_hwid
+
+;;
+
+esac
